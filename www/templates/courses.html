@@ -1,0 +1,49 @@
+<ion-view view-title="Courses">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="course in courses" >
+        
+
+<div class="list card">
+
+  <div class="item" href="#/app/courses/{{course.id}}">
+    <h2>{{course.title}}</h2>
+    <p>{{course.date}}</p>
+  </div>
+
+  <div class="item item-body">
+
+		<div class="list">
+
+		  <div class="item item-divider">
+			<div class="row">
+			  <div class="col">Coureur</div>
+			  <div class="col">Temps</div>
+			</div>
+		  </div>
+
+
+		  <a class="item item-button-right"  href="#" ng-repeat="resultat in course.resultats">
+		  <ul class="list">
+			<li class="row">
+			  <div class="col" padding-top="35px">{{resultat.name}}</div>
+			  <div class="col"> 
+			  	<i class="ion-ios-timer-outline padding-right"></i>{{resultat.time}}
+			  </div>
+			</li>
+			</ul>
+		  </a>
+
+
+		</div>
+
+    <p>
+      <a href="#" class="subdued"><i class="ion-android-add-circle padding-right"></i>Ajouter résultat</a>
+    </p>
+  </div>
+
+</div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

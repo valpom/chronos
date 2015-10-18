@@ -41,16 +41,25 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('CoursesCtrl', function($scope) {
+  $scope.courses = [
+    { title: 'Semi-Marathon de Nuits-Saint-Georges', 
+      date: '15/03/2015', id: 1 , 
+      resultats: [
+          {name: 'Valentin', time: '01 h 43 m 47 s'}, 
+          {name: 'Florian', time: '01 h 35 m 07 s'}
+        ]
+    },
+    { title: '20 Kilomètres de Tours', 
+      date: '20/09/2015', id: 2 , 
+      resultats: [
+          {name: 'Valentin', time: '01 h 39 m 49 s'}, 
+          {name: 'Florian', time: '01 h 27 m 08 s'},
+          {name: 'Pierrick', time: '01 h 25 m 19 s'}
+        ]
+    },
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('CourseCtrl', function($scope, $stateParams) {
 });
